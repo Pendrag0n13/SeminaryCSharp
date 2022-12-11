@@ -55,9 +55,21 @@ if(TaskNumber == 6)
     else
     {
         Console.Write("Число нечётное");
-    }
-    
+    }    
 }
 // Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
 // 5 -> 2, 4
 // 8 -> 2, 4, 6, 8
+if(TaskNumber == 8)
+{
+    Console.Write("Введите число N: ");
+    int NumberN = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Чётный числа от 1 до {0}:", NumberN);
+    for(int i = 1; i <= NumberN; i++)
+    {
+        if(i % 2 == 0)
+        {
+            Console.Write(" {0}", i);
+        }
+    }  
+}
