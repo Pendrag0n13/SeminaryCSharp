@@ -8,7 +8,21 @@ int TaskNumber = Convert.ToInt32(Console.ReadLine());
 // a = 5; b = 7 -> max = 7, min = 5
 // a = 2 b = 10 -> max = 10, min = 2
 // a = -9 b = -3 -> max = -3, min = -9
-
+if(TaskNumber == 2)
+{
+    Console.Write("Введите первое число: ");
+    int firstNumber = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите второе число: ");
+    int secondNumber = Convert.ToInt32(Console.ReadLine());
+    if(firstNumber < secondNumber)
+    {
+        Console.Write("max = {0}, min = 2{1}", secondNumber, firstNumber);
+    }
+    else
+    {
+        Console.Write("max = {0}, min = {1}", firstNumber, secondNumber);
+    }
+}
 
 // Задача 4: Напишите программу, которая принимает на вход
 // три числа и выдает максимальное из этих чисел.
