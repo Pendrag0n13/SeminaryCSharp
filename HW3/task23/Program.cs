@@ -5,3 +5,21 @@
 5 -> 1, 8, 27, 64, 125
 */
 
+String s = String.Empty;
+do
+{    
+    Console.Write("Введите число N: ");
+    int N = Convert.ToInt32(Console.ReadLine());
+    if (N > 0)
+    {        
+        for(int i = 1; i <= N; i++)
+        {
+            var res = Math.Pow(i, 3);
+            Console.Write($"{res} ");
+        }
+    }
+
+    Console.WriteLine();
+    Console.WriteLine("Завершить программу y/n ?");
+    s = Console.ReadLine();
+}while(s != "y");
