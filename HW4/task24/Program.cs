@@ -22,11 +22,36 @@ int Sum1toA(int A) //нахождение суммы от 1 до А
     {
         sum += i;
     }
+    return sum;
 }
 
 int GetNumber(string message)
 {
-    Console.Write($"{message}");
+    Console.Write(message);
     return Convert.ToInt32(Console.ReadLine());
 }
 
+void main()
+{
+    String s = String.Empty;
+    do
+    { 
+        int numberA = GetNumber("Введите число A: ");
+        if(Validate(numberA))
+        {
+            int sum = Sum1toA(numberA);
+            Console.WriteLine($"Сумма чисел от 1 до {numberA} = {sum}");
+        }
+        else
+        {
+            Console.WriteLine($"Невозможно получить сумму чисел от 1 до {numberA}");
+        }
+        
+        Console.WriteLine();
+        Console.WriteLine("Завершить программу y/n ?");
+        s = Console.ReadLine();
+    }while(s != "y");
+
+}
+
+main();
