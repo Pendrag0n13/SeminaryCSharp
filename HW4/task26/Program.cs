@@ -2,3 +2,9 @@
 // 456 -> 3
 // 78 -> 2
 // 89126 -> 5
+
+int GetNumber(string message)
+{
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
+}
