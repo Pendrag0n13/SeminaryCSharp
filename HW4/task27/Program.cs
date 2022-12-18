@@ -15,8 +15,9 @@ int SumNumber(int number)//сумма цифр в числе
     int sum = 0;
     while (NFunc > 0)
     {
-        sum = NFunc % 10;
+        sum += NFunc % 10;
         NFunc = NFunc / 10;
     }
     return sum;
 }
+
