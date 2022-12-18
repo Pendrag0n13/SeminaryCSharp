@@ -8,3 +8,16 @@ int GetNumber(string message)
     Console.Write(message);
     return Convert.ToInt32(Console.ReadLine());
 }
+
+int countNumber(int N)
+{
+    int NFunc = Math.Abs(N);
+    int count = 0;
+    do
+    {
+        NFunc = NFunc / 10;
+        count++;
+    } while (NFunc > 0);
+    return count;
+}
+
