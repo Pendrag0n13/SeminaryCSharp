@@ -12,3 +12,18 @@ int[] CreateArray0and1(int N)
     }
     return mass;
 }
+
+void main()
+{
+    String s = String.Empty;
+    do
+    {        
+        int N = 8;   
+        Console.WriteLine($"[{string.Join(", ", CreateArray0and1(N))}]");
+        Console.WriteLine("Завершить программу y/n ?");
+        s = Console.ReadLine();
+    }while(s != "y");
+
+}
+
+main();
