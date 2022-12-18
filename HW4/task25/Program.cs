@@ -11,6 +11,7 @@ bool Validate(int number)//является ли число натуральны
     {
         f = true;
     }
+    return f;
 }
 
 int GetNumber(string message)
@@ -28,3 +29,27 @@ int Calculation(int A, int B)//возводит число A в натураль
     }
     return pow;
 }
+
+void main()
+{
+    String s = String.Empty;
+    do
+    { 
+        int numberA = GetNumber("Введите число A: ");
+        int numberB = GetNumber("Введите число B: ");
+        if(Validate(numberB))
+        {
+            Console.WriteLine($"Число {numberA} в степени {numberB} = {Calculation(numberA, numberB)}");
+        }
+        else
+        {
+            Console.WriteLine($"Число {numberB} не является натуральным");
+        }
+        Console.WriteLine();
+        Console.WriteLine("Завершить программу y/n ?");
+        s = Console.ReadLine();
+    }while(s != "y");
+
+}
+
+main();
