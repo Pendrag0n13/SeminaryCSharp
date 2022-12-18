@@ -7,3 +7,19 @@ int GetNumber(string message)
     Console.Write(message);
     return Convert.ToInt32(Console.ReadLine());
 }
+
+void main()
+{
+    String s = String.Empty;
+    do
+    { 
+        int number = GetNumber("Введите число N: ");
+
+        Console.WriteLine();
+        Console.WriteLine("Завершить программу y/n ?");
+        s = Console.ReadLine();
+    }while(s != "y");
+
+}
+
+main();
