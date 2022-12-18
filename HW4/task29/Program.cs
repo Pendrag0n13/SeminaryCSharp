@@ -17,3 +17,12 @@ int[] CreateArray(int N)
     int[] mass = new int[N];    
 }
 
+int[] FillingArray(int mass[])
+{
+    for(int i = 0; i < mass.Length; i++)
+    {
+        mass[i] = GetNumber();
+    }
+
+    return mass;
+}
