@@ -8,13 +8,24 @@ int GetNumber(string message)
     return Convert.ToInt32(Console.ReadLine());
 }
 
+int Factorial(int N)
+{
+    int mul = 1;
+    for(int i = 1; i <= N; i++)
+    {
+        mul *= i;
+    }
+    result mul;
+}
+
 void main()
 {
     String s = String.Empty;
     do
     { 
         int number = GetNumber("Введите число N: ");
-
+        int multiplication = Factorial(number);
+        Console.WriteLine($"Произведение чисел от 1 до {number} = {count}");
         Console.WriteLine();
         Console.WriteLine("Завершить программу y/n ?");
         s = Console.ReadLine();
