@@ -3,3 +3,12 @@
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 // Не использовать Math.Pow() и аналоги!
+
+bool Validate(int number)
+{
+    bool f = false;
+    if(number > 0)
+    {
+        f = true;
+    }
+}
