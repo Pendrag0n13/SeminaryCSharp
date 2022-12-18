@@ -21,3 +21,18 @@ int SumNumber(int number)//сумма цифр в числе
     return sum;
 }
 
+void main()
+{
+    String s = String.Empty;
+    do
+    { 
+        int number = GetNumber("Введите число: ");
+        Console.WriteLine($"Сумма цифр в числе {number} = {SumNumber(number)}");
+        Console.WriteLine();
+        Console.WriteLine("Завершить программу y/n ?");
+        s = Console.ReadLine();
+    }while(s != "y");
+
+}
+
+main();
