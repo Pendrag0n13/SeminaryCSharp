@@ -15,7 +15,7 @@ int Factorial(int N)
     {
         mul *= i;
     }
-    result mul;
+    return mul;
 }
 
 void main()
@@ -24,8 +24,8 @@ void main()
     do
     { 
         int number = GetNumber("Введите число N: ");
-        int multiplication = Factorial(number);
-        Console.WriteLine($"Произведение чисел от 1 до {number} = {count}");
+        int multiply = Factorial(number);
+        Console.WriteLine($"Произведение чисел от 1 до {number} = {multiply}");
         Console.WriteLine();
         Console.WriteLine("Завершить программу y/n ?");
         s = Console.ReadLine();
