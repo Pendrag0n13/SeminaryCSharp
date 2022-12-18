@@ -24,3 +24,9 @@ int Sum1toA(int A) //нахождение суммы от 1 до А
     }
 }
 
+int GetNumber(string message)
+{
+    Console.Write($"{message}");
+    return Convert.ToInt32(Console.ReadLine());
+}
+
