@@ -18,3 +18,13 @@ int GetNumber(string message)
     Console.Write(message);
     return Convert.ToInt32(Console.ReadLine());
 }
+
+int Calculation(int A, int B)//возводит число A в натуральную степень B
+{
+    int pow = A;
+    for(int i = 2; i <= B; i++)
+    {
+        pow *= A;
+    }
+    return pow;
+}
