@@ -9,7 +9,7 @@ int GetNumber(string message)
     return Convert.ToInt32(Console.ReadLine());
 }
 
-int countNumber(int N)
+int CountNumber(int N)
 {
     int NFunc = Math.Abs(N);
     int count = 0;
@@ -21,3 +21,20 @@ int countNumber(int N)
     return count;
 }
 
+void main()
+{
+    String s = String.Empty;
+    do
+    { 
+        int number = GetNumber("Введите число N: ");        
+        int count = CountNumber(number);
+        Console.WriteLine($"Количество цифр в числе {number} = {count}");
+
+        Console.WriteLine();
+        Console.WriteLine("Завершить программу y/n ?");
+        s = Console.ReadLine();
+    }while(s != "y");
+
+}
+
+main();
