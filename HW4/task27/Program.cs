@@ -8,3 +8,15 @@ int GetNumber(string message)
     Console.Write(message);
     return Convert.ToInt32(Console.ReadLine());
 }
+
+int SumNumber(int number)//сумма цифр в числе
+{
+    int NFunc = Math.Abs(number);
+    int sum = 0;
+    while (NFunc > 0)
+    {
+        sum = NFunc % 10;
+        NFunc = NFunc / 10;
+    }
+    return sum;
+}
