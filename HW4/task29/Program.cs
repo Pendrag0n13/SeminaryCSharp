@@ -11,3 +11,9 @@ int GetNumber()
 {
     return Convert.ToInt32(Console.ReadLine());
 }
+
+int[] CreateArray(int N)
+{
+    int[] mass = new int[N];    
+}
+
