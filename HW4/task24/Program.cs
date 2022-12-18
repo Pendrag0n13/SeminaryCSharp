@@ -15,3 +15,12 @@ bool Validate(int number)//проверка, можно ли найти сумм
     }
 }
 
+int Sum1toA(int A) //нахождение суммы от 1 до А
+{
+    int sum = 0;
+    for(int i = 1; i <= A; i++)
+    {
+        sum += i;
+    }
+}
+
