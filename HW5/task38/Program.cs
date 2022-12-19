@@ -30,12 +30,28 @@ int[] CreateArray(int N, int leftRange, int rightRange)
     return (min, max);
 }
 
-int DifferenceMaxBetweenMin(int min, int max)
+int DifferenceMaxBetweenMin((int min, int max) dif)
 {
-    return (max - min);
+    return (dif.max - dif.min);
 }
 
 const int SIZE = 5;
 const int LEFTRANGE = 0;
 const int RIGHTRANGE = 100; 
 
+void main()
+{
+    String s = String.Empty;
+    do
+    { 
+        int[] arr = CreateArray(SIZE, LEFTRANGE, RIGHTRANGE);
+        Console.Write($"[{string.Join(",", arr)}] -> ");
+        Console.Write(DifferenceMaxBetweenMin(MaxAndMinElements(arr)));       
+        Console.WriteLine();
+        Console.WriteLine("Завершить программу y/n ?");
+        s = Console.ReadLine();
+    }while(s != "y");
+
+}
+
+main();
