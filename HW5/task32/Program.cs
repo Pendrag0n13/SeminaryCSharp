@@ -13,3 +13,11 @@ int[] CreateArray(int N, int leftRange, int rightRange)
     return mass;
 }
 
+void ChangeSign(int[] array)
+{
+    for(int i = 0; i < mass.Length; i++)
+    {
+        mass[i] = mass[i] * (-1);
+    }
+}
+
