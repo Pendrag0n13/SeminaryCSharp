@@ -43,3 +43,5 @@ Console.WriteLine(string.Join(",", arr));
 int sumP;
 int sumN;
 (sumP, sumN) = GetSumPositiveAndNegative(arr);
+
+Console.WriteLine($"Сумма положительных чисел = {sumP}, сумма отрицательных = {sumN}");
