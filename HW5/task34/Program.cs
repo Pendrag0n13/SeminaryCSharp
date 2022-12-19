@@ -25,3 +25,7 @@ int CoutEvenNumber(int[] mass)
     }
     return count;
 }
+
+const int SIZE = 5;
+const int LEFTRANGE = 0;
+const int RIGHTRANGE = 10; 
