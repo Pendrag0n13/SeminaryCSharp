@@ -13,7 +13,7 @@ int[] CreateArray(int N, int leftRange, int rightRange)
     return mass;
 }
 
-void ChangeSign(int[] array)
+int[] ChangeSign(int[] array)
 {
     for(int i = 0; i < mass.Length; i++)
     {
@@ -25,3 +25,20 @@ const int SIZE = 4;
 const int LEFTRANGE = -99;
 const int RIGHTRANGE = 100; 
 
+void main()
+{
+    String s = String.Empty;
+    do
+    { 
+        int arr = Cre(SIZE, LEFTRANGE, RIGHTRANGE);
+        Console.WriteLine(string.Join(",", arr));
+        arr = ChangeSign(arr);
+        Console.WriteLine(string.Join(",", arr));
+        Console.WriteLine();
+        Console.WriteLine("Завершить программу y/n ?");
+        s = Console.ReadLine();
+    }while(s != "y");
+
+}
+
+main();
