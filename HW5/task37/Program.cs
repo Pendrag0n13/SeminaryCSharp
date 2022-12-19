@@ -18,14 +18,35 @@ int[] CreateArray(int N, int leftRange, int rightRange)
 int[] MultyPara(int[] mass)
 {
     int size = (mass.Length/2 + mass.Length%2);
-    int[] result = new int[size];
-    for(int i = 0; i < mass.Length; i++)
+    int[] result = new int[size];    
+    for(int i = 0; i < size; i++)
     {
         result[i] = mass[i] * mass[mass.Length - 1 - i];
+    }    
+    if(mass.Length%2 != 0)
+    {
+        result[size-1] = mass[size-1];
     }
     return result;
 }
 
-const int SIZE = 4;
-const int LEFTRANGE = -99;
-const int RIGHTRANGE = 100; 
+const int SIZE = 5;
+const int LEFTRANGE = 0;
+const int RIGHTRANGE = 10; 
+
+void main()
+{
+    String s = String.Empty;
+    do
+    { 
+        int[] arr = CreateArray(SIZE, LEFTRANGE, RIGHTRANGE);
+        Console.Write($"[{string.Join(",", arr)}] -> ");
+        Console.Write($"[{string.Join(",", MultyPara(arr))}]");       
+        Console.WriteLine();
+        Console.WriteLine("Завершить программу y/n ?");
+        s = Console.ReadLine();
+    }while(s != "y");
+
+}
+
+main();
