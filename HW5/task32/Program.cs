@@ -21,3 +21,7 @@ void ChangeSign(int[] array)
     }
 }
 
+const int SIZE = 4;
+const int LEFTRANGE = -99;
+const int RIGHTRANGE = 100; 
+
