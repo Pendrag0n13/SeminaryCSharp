@@ -31,3 +31,9 @@ int[] CreateArray(int N, int leftRange, int rightRange)
     }
     return (sumPositive, sumNegative);
 }
+
+const int SIZE = 12;
+const int LEFTRANGE = -9;
+const int RIGHTRANGE = 9;
+
+int arr = CreateArray(SIZE, LEFTRANGE, RIGHTRANGE);
