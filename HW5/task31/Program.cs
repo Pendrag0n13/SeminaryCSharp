@@ -37,3 +37,6 @@ const int LEFTRANGE = -9;
 const int RIGHTRANGE = 9;
 
 int arr = CreateArray(SIZE, LEFTRANGE, RIGHTRANGE);
+
+Console.WriteLine(string.Join(",", arr));
+
