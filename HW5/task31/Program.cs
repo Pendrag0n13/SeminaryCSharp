@@ -40,3 +40,6 @@ int arr = CreateArray(SIZE, LEFTRANGE, RIGHTRANGE);
 
 Console.WriteLine(string.Join(",", arr));
 
+int sumP;
+int sumN;
+(sumP, sumN) = GetSumPositiveAndNegative(arr);
