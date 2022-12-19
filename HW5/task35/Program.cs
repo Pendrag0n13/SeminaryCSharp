@@ -14,3 +14,16 @@ int[] CreateArray(int N, int leftRange, int rightRange)
     }
     return mass;
 }
+
+int CountElementsRange(int[] arary, int leftRange, int rightRange)
+{
+    int count = 0;
+    for(int i = 0; i < arary.Length; i++)
+    {
+        if(arary >=  leftRange || arary <= rightRange)
+        {
+            count++;
+        }
+    }
+    return count;
+}
