@@ -15,10 +15,11 @@ int[] CreateArray(int N, int leftRange, int rightRange)
 
 int[] ChangeSign(int[] array)
 {
-    for(int i = 0; i < mass.Length; i++)
+    for(int i = 0; i < array.Length; i++)
     {
-        mass[i] = mass[i] * (-1);
+        array[i] = array[i] * (-1);
     }
+    return array;
 }
 
 const int SIZE = 4;
@@ -30,7 +31,7 @@ void main()
     String s = String.Empty;
     do
     { 
-        int arr = Cre(SIZE, LEFTRANGE, RIGHTRANGE);
+        int[] arr = CreateArray(SIZE, LEFTRANGE, RIGHTRANGE);
         Console.WriteLine(string.Join(",", arr));
         arr = ChangeSign(arr);
         Console.WriteLine(string.Join(",", arr));
