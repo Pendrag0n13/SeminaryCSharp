@@ -27,5 +27,22 @@ int CoutEvenNumber(int[] mass)
 }
 
 const int SIZE = 5;
-const int LEFTRANGE = 0;
-const int RIGHTRANGE = 10; 
+const int LEFTRANGE = 100;
+const int RIGHTRANGE = 999; 
+
+void main()
+{
+    String s = String.Empty;
+    do
+    { 
+        int[] arr = CreateArray(SIZE, LEFTRANGE, RIGHTRANGE);
+        Console.Write($"[{string.Join(",", arr)}] -> ");
+        Console.Write(CoutEvenNumber(arr));       
+        Console.WriteLine();
+        Console.WriteLine("Завершить программу y/n ?");
+        s = Console.ReadLine();
+    }while(s != "y");
+
+}
+
+main();
