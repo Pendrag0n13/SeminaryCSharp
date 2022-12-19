@@ -25,3 +25,7 @@ int[] MultyPara(int[] mass)
     }
     return result;
 }
+
+const int SIZE = 4;
+const int LEFTRANGE = -99;
+const int RIGHTRANGE = 100; 
