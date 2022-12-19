@@ -13,3 +13,16 @@ int[] CreateArray(int N, int leftRange, int rightRange)
     }
     return mass;
 }
+
+int SumUnevenElements(int mass)
+{
+    int sum = 0;
+    for(int i = 1; i < mass.Length; i++)
+    {
+        if(i%2 != 0)
+        {
+            sum += mass[i];
+        }
+    }
+    return sum;
+}
