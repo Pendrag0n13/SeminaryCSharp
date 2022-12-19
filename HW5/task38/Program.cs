@@ -30,6 +30,12 @@ int[] CreateArray(int N, int leftRange, int rightRange)
     return (min, max);
 }
 
+int DifferenceMaxBetweenMin(int min, int max)
+{
+    return (max - min);
+}
+
 const int SIZE = 5;
 const int LEFTRANGE = 0;
-const int RIGHTRANGE = 20; 
+const int RIGHTRANGE = 100; 
+
