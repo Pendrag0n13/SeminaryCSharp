@@ -14,4 +14,20 @@ int[] CreateArray(int N, int leftRange, int rightRange)
     return mass;
 }
 
-
+(int, int) GetSumPositiveAndNegative(int[] array)
+{
+    int sumPositive = 0;
+    int sumNegative = 0;
+    for(int i = 0; i < array.Length; i++)
+    {
+        if(array[i] > 0)//positive element
+        {
+            sumPositive += array[i];
+        }
+        else if(array[i] < 0)//negative element
+        {
+            sumNegative += array[i];   
+        }
+    }
+    return (sumPositive, sumNegative);
+}
