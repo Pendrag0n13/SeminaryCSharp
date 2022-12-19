@@ -29,3 +29,7 @@ int[] CreateArray(int N, int leftRange, int rightRange)
     }
     return (min, max);
 }
+
+const int SIZE = 5;
+const int LEFTRANGE = 0;
+const int RIGHTRANGE = 20; 
