@@ -11,3 +11,21 @@ int[] CreateArray(int N, int leftRange, int rightRange)
     }
     return mass;
 }
+
+(int, int) MaxAndMinElements(int[] mass)
+{
+    int max = mass[0];
+    int min = mass[0];
+    for(int i = 0; i < mass.Length; i++)
+    {
+        if(mass[i] > max)
+        {
+            max = mass[i];
+        }
+        if(mass[i] < min)
+        {
+            min = mass[i];
+        }
+    }
+    return (min, max);
+}
