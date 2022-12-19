@@ -27,3 +27,9 @@ bool PresentInArray(int[] mass, int number)
 const int SIZE = 4;
 const int LEFTRANGE = -99;
 const int RIGHTRANGE = 100; 
+
+int GetNumber(string message)
+{
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
+}
