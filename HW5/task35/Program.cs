@@ -20,7 +20,7 @@ int CountElementsRange(int[] arary, int leftRange, int rightRange)
     int count = 0;
     for(int i = 0; i < arary.Length; i++)
     {
-        if(arary >=  leftRange || arary <= rightRange)
+        if(arary[i] >=  leftRange && arary[i] <= rightRange)
         {
             count++;
         }
@@ -28,8 +28,25 @@ int CountElementsRange(int[] arary, int leftRange, int rightRange)
     return count;
 }
 
-const int SIZE = 4;
-const int LEFTRANGE1 = 0;
-const int RIGHTRANGE1 = 151; 
-const int LEFTRANGE2 = 10;
-const int RIGHTRANGE2 = 100; 
+const int SIZE = 123; //размер массива
+const int LEFTRANGE1 = 0;//левая граница диапазона случайных чисел при заполнении массива
+const int RIGHTRANGE1 = 150;//правая граница диапазона случайных чисел при заполнении массива
+const int LEFTRANGE2 = 10;//левая граница отрезка, в котором должны лежать числа
+const int RIGHTRANGE2 = 100;//правая граница отрезка, в котором должны лежать  числа
+
+void main()
+{
+    String s = String.Empty;
+    do
+    { 
+        int[] arr = CreateArray(SIZE, LEFTRANGE1, RIGHTRANGE1);
+        Console.Write($"[{string.Join(",", arr)}] -> ");
+        Console.WriteLine(CountElementsRange(arr, LEFTRANGE2, RIGHTRANGE2));        
+        Console.WriteLine();
+        Console.WriteLine("Завершить программу y/n ?");
+        s = Console.ReadLine();
+    }while(s != "y");
+
+}
+
+main();
