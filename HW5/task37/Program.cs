@@ -14,3 +14,14 @@ int[] CreateArray(int N, int leftRange, int rightRange)
     }
     return mass;
 }
+
+int[] MultyPara(int[] mass)
+{
+    int size = (mass.Length/2 + mass.Length%2);
+    int[] result = new int[size];
+    for(int i = 0; i < mass.Length; i++)
+    {
+        result[i] = mass[i] * mass[mass.Length - 1 - i];
+    }
+    return result;
+}
