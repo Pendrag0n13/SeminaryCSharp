@@ -12,3 +12,16 @@ int[] CreateArray(int N, int leftRange, int rightRange)
     }
     return mass;
 }
+
+int CoutEvenNumber(int[] mass)
+{
+    int count = 0;
+    for(int i = 0; i < mass.Length; i++)
+    {
+        if(mass[i]%2 == 0)
+        {
+            count++;
+        }
+    }
+    return count;
+}
