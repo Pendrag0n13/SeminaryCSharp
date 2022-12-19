@@ -14,7 +14,7 @@ int[] CreateArray(int N, int leftRange, int rightRange)
     return mass;
 }
 
-int SumUnevenElements(int mass)
+int SumUnevenElements(int[] mass)
 {
     int sum = 0;
     for(int i = 1; i < mass.Length; i++)
@@ -30,3 +30,20 @@ int SumUnevenElements(int mass)
 const int SIZE = 5;
 const int LEFTRANGE = -10;
 const int RIGHTRANGE = 10; 
+
+void main()
+{
+    String s = String.Empty;
+    do
+    { 
+        int[] arr = CreateArray(SIZE, LEFTRANGE, RIGHTRANGE);
+        Console.Write($"[{string.Join(",", arr)}] -> ");
+        Console.Write(SumUnevenElements(arr));       
+        Console.WriteLine();
+        Console.WriteLine("Завершить программу y/n ?");
+        s = Console.ReadLine();
+    }while(s != "y");
+
+}
+
+main();
