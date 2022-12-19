@@ -11,3 +11,17 @@ int[] CreateArray(int N, int leftRange, int rightRange)
     }
     return mass;
 }
+
+bool PresentInArray(int[] mass, int number)
+{
+    for(int i = 0; i < mass.Length; i++)
+    {
+        if(mass[i] == number)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+
