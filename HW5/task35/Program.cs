@@ -27,3 +27,9 @@ int CountElementsRange(int[] arary, int leftRange, int rightRange)
     }
     return count;
 }
+
+const int SIZE = 4;
+const int LEFTRANGE1 = 0;
+const int RIGHTRANGE1 = 151; 
+const int LEFTRANGE2 = 10;
+const int RIGHTRANGE2 = 100; 
