@@ -26,3 +26,7 @@ int SumUnevenElements(int mass)
     }
     return sum;
 }
+
+const int SIZE = 5;
+const int LEFTRANGE = -10;
+const int RIGHTRANGE = 10; 
