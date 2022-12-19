@@ -4,3 +4,13 @@
 // [5, 18, 123, 6, 2] -> 1
 // [1, 2, 3, 6, 2] -> 0
 // [10, 11, 12, 13, 14] -> 5
+int[] CreateArray(int N, int leftRange, int rightRange)
+{
+    var rand = new Random();
+    int[] mass = new int [N];
+    for(int i = 0; i < mass.Length; i++)
+    {
+        mass[i] = rand.Next(leftRange, rightRange + 1);
+    }
+    return mass;
+}
