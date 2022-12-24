@@ -16,3 +16,9 @@ double GetY(double k1, double b1, double k2, double b2)
 {
     return ((k1 * b2 - k2 * b1) / (k1 - k2));
 }
+
+double GetNumber(string message)
+{
+    Console.Write(message);
+    return Convert.ToDouble(Console.ReadLine());
+}
