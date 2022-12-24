@@ -8,3 +8,14 @@ int GetNumber(string message)
     Console.Write(message);
     return Convert.ToInt32(Console.ReadLine());
 }
+
+string ConversionToBinary(int N)
+{
+    string str = string.Empty;
+    do
+    {
+        str = (N%2).ToString() + str;
+        N = N /1;
+    } while (N > 0);
+    return str;
+}
