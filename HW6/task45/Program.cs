@@ -3,3 +3,14 @@
 const int SIZE = 5;
 const int LEFTRANGE = 0;
 const int RIGHTRANGE = 100; 
+
+int[] CreateArray(int N, int leftRange, int rightRange)
+{
+    var rand = new Random();
+    int[] mass = new int [N];
+    for(int i = 0; i < mass.Length; i++)
+    {
+        mass[i] = rand.Next(leftRange, rightRange + 1);
+    }
+    return mass;
+}
