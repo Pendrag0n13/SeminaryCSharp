@@ -19,3 +19,22 @@ int[] CreateArrayAndFilling(int N)
     }
     return mass;
 }
+
+bool Validate(int[] mass)
+{
+    bool f = true;
+    if(mass.Length == 3)
+    {
+        f = f && mass[0] < mass[1] + mass[2];
+
+        f = f && mass[1] < mass[0] + mass[2];
+
+        f = f && mass[2] < mass[1] + mass[0];
+
+    }
+    else
+    {
+        f = false;
+    }
+    return f;
+}
