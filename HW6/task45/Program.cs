@@ -14,3 +14,19 @@ int[] CreateArray(int N, int leftRange, int rightRange)
     }
     return mass;
 }
+
+void main()
+{
+    String s = String.Empty;
+    do
+    { 
+        int[] arr = CreateArray(SIZE, LEFTRANGE, rightRange);
+        
+        Console.WriteLine();
+        Console.WriteLine("Завершить программу y/n ?");
+        s = Console.ReadLine();
+    }while(s != "y");
+
+}
+
+main();
