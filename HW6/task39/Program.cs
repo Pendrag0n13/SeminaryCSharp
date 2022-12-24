@@ -17,6 +17,17 @@ int[] CreateArray(int N, int leftRange, int rightRange)
     return mass;
 }
 
+void Reverse(int[] array)
+{
+    int tmp = 0;
+    for(int i = 0; i < array.Length/2; i++)
+    {
+        tmp = array[i];
+        array[i] = array[array.Length-1-i];
+        array[array.Length-1-i]= tmp;
+    }
+}
+
 void main()
 {
     String s = String.Empty;
