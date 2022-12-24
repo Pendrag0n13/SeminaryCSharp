@@ -35,6 +35,8 @@ void main()
     { 
         int[] arr = CreateArray(SIZE, LEFTRANGE, RIGHTRANGE);
         Console.Write($"[{string.Join(",", arr)}] -> ");
+        Reverse(arr);
+        Console.Write($"[{string.Join(",", arr)}] -> ");
         
         Console.WriteLine();
         Console.WriteLine("Завершить программу y/n ?");
