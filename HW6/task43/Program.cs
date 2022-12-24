@@ -22,3 +22,30 @@ double GetNumber(string message)
     Console.Write(message);
     return Convert.ToDouble(Console.ReadLine());
 }
+
+void main()
+{
+    String s = String.Empty;
+    do
+    {
+        k1 = GetNumber("k1 = ");
+        k2 = GetNumber("k2 = ");
+        b1 = GetNumber("b1 = ");
+        b2 = GetNumber("b2 = ");
+        if (k1 != k2)
+        {
+            double dotX = GetX(k1, b1, k2, b2);
+            double dotY = GetY(k1, b1, k2, b2);
+            Console.WriteLine($"b1 = {b1}, k1 = {k1}, b2 = {b2}, k2 = {k2} -> ({dotX}; {dotY})");
+        }
+        else
+        {
+            Console.WriteLine($"k1 = k2 -> прямые параллельны");
+        }
+        Console.WriteLine();
+        Console.WriteLine("Завершить программу y/n ?");
+        s = Console.ReadLine();
+    } while (s != "y");
+}
+
+main();
