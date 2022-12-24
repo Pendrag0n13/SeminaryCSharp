@@ -9,13 +9,45 @@ int GetNumber(string message)
     return Convert.ToInt32(Console.ReadLine());
 }
 
+string FibonacciN(int N)
+{
+    string str = string.Empty;
+    if(N == 0)
+    {
+        str = "0"; 
+    }
+    else if (N == 1)
+    {
+        str = "0, 1"; 
+    }
+    else if (N >= 2)
+    {
+        int[] mass = new int[N + 1];
+        mass[0] = 0;
+        mass[1] = 1;
+        int i = 2;
+        str = "0, 1";
+        do
+        {
+            mass[i] = mass[i-1] + mass[i-2];
+            str = str + ", " + mass[i].ToString();
+            i++;
+        } while (i <= N);
+    }
+    else
+    {
+        str = "Введено некорректное число!";
+    }
+    return str; 
+}
+
 void main()
 {
     String s = String.Empty;
     do
     { 
         int numberA = GetNumber("Введите число N: ");
-        
+        Console.WriteLine("Первые N чисел Фибоначчи: " + FibonacciN(numberA));
         Console.WriteLine();
         Console.WriteLine("Завершить программу y/n ?");
         s = Console.ReadLine();
