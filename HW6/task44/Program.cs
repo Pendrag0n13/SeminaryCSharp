@@ -12,27 +12,25 @@ int GetNumber(string message)
 string FibonacciN(int N)
 {
     string str = string.Empty;
-    if(N == 0)
+    if(N == 1)
     {
         str = "0"; 
     }
-    else if (N == 1)
+    else if (N == 2)
     {
         str = "0, 1"; 
     }
-    else if (N >= 2)
+    else if (N > 2)
     {
-        int[] mass = new int[N + 1];
+        int[] mass = new int[N];
         mass[0] = 0;
         mass[1] = 1;
-        int i = 2;
         str = "0, 1";
-        do
+        for(int i = 2; i < N; i++)
         {
             mass[i] = mass[i-1] + mass[i-2];
             str = str + ", " + mass[i].ToString();
-            i++;
-        } while (i <= N);
+        }
     }
     else
     {
