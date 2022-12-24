@@ -7,3 +7,15 @@ int GetNumber(string message)
     Console.Write(message);
     return Convert.ToInt32(Console.ReadLine());
 }
+
+int[] CreateArrayAndFilling(int N)
+{
+    int[] mass = new int [N];
+    string str;
+    for(int i = 0; i < mass.Length; i++)
+    {
+        str = "$\"Введите длину " + (i + 1).ToString() + " стороны треугольника: \"";
+        mass[i] = GetNumber(str);
+    }
+    return mass;
+}
