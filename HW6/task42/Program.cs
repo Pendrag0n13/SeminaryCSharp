@@ -14,8 +14,25 @@ string ConversionToBinary(int N)
     string str = string.Empty;
     do
     {
-        str = (N%2).ToString() + str;
-        N = N /1;
+        str = (N % 2).ToString() + str;
+        N = N / 2;
     } while (N > 0);
     return str;
 }
+
+void main()
+{
+    String s = String.Empty;
+    do
+    { 
+        int numberA = GetNumber("Введите десятичное число: ");
+        Console.WriteLine("Двоичное представление: {0}", ConversionToBinary(numberA));
+
+        Console.WriteLine();
+        Console.WriteLine("Завершить программу y/n ?");
+        s = Console.ReadLine();
+    }while(s != "y");
+
+}
+
+main();
