@@ -72,3 +72,11 @@ int[,] Dictionary(int[,] matrix, int[] list)
 }
 
 int[] LIST = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+
+void PrintDictionary(int[,] dict)
+{
+    for (int k = 0; k < dict.GetLength(0); k++)
+    {
+        Console.Write($"{dict[k, 0]} встречается {dict[k, 1]} раз(а)");
+    }
+}
