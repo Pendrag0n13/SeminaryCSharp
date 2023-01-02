@@ -57,3 +57,16 @@ int CountElement(int[,] matrix, int element)
     }
     return count;
 }
+
+int[,] Dictionary(int[,] matrix, int[] list)
+{
+    int[,] dict = new int[list.Length, 2];
+
+    for (int k = 0; k < list.Length; k++)
+    {
+        dict[k, 0] = list[k];
+        dict[k, 1] = CountElement(matrix, list[k]);
+    }
+
+    return dict;
+}
