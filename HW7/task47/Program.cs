@@ -31,7 +31,7 @@ void PrintMatrix(double[,] matrix)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            Console.Write(matrix[i, j] + " ");
+            Console.Write("{0,8:N1}", matrix[i, j]);
         }
         Console.WriteLine();
     }
