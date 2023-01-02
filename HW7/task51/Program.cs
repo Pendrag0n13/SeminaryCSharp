@@ -7,3 +7,17 @@
 // Сумма элементов главной диагонали: 1+9+2 = 12
 // ​
 // Доп. условие для 51 задачи: сделать суммирование в один цикл. Матрица может быть прямоугольный
+
+int[,] CreateArrayMxN(int rowCount, int colCount, int leftRange = 0, int rightRange = 50)
+{
+    Random rand = new Random();
+    int[,] mass = new int[rowCount, colCount];
+    for (int i = 0; i < mass.GetLength(0); i++)
+    {
+        for (int j = 0; j < mass.GetLength(1); j++)
+        {
+            mass[i, j] = rand.Next(leftRange, rightRange + 1);
+        }
+    }
+    return mass;
+}
