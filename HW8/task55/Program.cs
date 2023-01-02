@@ -1,4 +1,4 @@
-﻿// Задача 55: Задайте двумерный массив. Напишите программу, которая заменяет строки на столбцы. 
+﻿// Задача 55: Задайте двумерный массив. Напишите программу, которая заменяет строки на столбцы.
 // В случае, если это невозможно, программа должна вывести сообщение для пользователя.
 
 int[,] CreateArrayMxN(int rowCount, int colCount, int leftRange = 0, int rightRange = 9)
@@ -31,4 +31,19 @@ void PrintMatrix(int[,] matrix)
         }
         Console.WriteLine();
     }
+}
+
+int[,] Replacement(int[,] matrix)
+{
+    int[,] temp = new int[matrix.GetLength(1), matrix.GetLength(0)];
+
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            temp[j, i] = matrix[i, j];
+        }
+    }
+
+    return temp;
 }
