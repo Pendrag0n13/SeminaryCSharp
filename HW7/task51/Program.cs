@@ -66,3 +66,25 @@ int SumMainDiagonal(int[,] matrix)
 
     return sum;
 }
+
+
+void main()
+{
+    String s = String.Empty;
+    do
+    { 
+        int rows = GetNumber("Введите число строк: ");
+        int columns = GetNumber("Введите число столбцов: ");
+        int[,] arr = CreateArrayMxN(rows, columns);
+        Console.WriteLine("Matrix:");
+        PrintMatrix(arr);
+        Console.Write($"Summ = {SumMainDiagonal(arr)}");
+        
+        Console.WriteLine();
+        Console.WriteLine("Завершить программу y/n ?");
+        s = Console.ReadLine();
+    }while(s != "y");
+
+}
+
+main();
