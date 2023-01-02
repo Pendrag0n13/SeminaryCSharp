@@ -38,3 +38,18 @@ void PrintMatrix(int[,] matrix)
         Console.WriteLine();
     }
 }
+
+double[] AverageColumns(int[,] matrix)
+{
+    double[] avercol = new double[matrix.GetLength(1)];
+    for (int j = 0; j < matrix.GetLength(1); j++)
+    {
+        avercol[j] = 0;
+        for (int i = 0; i < matrix.GetLength(0); i++)
+        {
+            avercol[j] = matrix[i, j];
+        }
+        avercol[j] = avercol[j] / matrix.GetLength(0);
+    }
+    return avercol;
+}
