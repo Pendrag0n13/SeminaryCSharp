@@ -47,9 +47,29 @@ double[] AverageColumns(int[,] matrix)
         avercol[j] = 0;
         for (int i = 0; i < matrix.GetLength(0); i++)
         {
-            avercol[j] = matrix[i, j];
+            avercol[j] += matrix[i, j];
         }
         avercol[j] = avercol[j] / matrix.GetLength(0);
+        avercol[j] = Math.Round(avercol[j], 2);
     }
     return avercol;
 }
+
+void main()
+{
+    String s = String.Empty;
+    do
+    {
+        int rows = GetNumber("Введите число строк: ");
+        int columns = GetNumber("Введите число столбцов: ");
+        int[,] arr = CreateArrayMxN(rows, columns);
+        PrintMatrix(arr);
+        Console.WriteLine($"Среднее арифметическое каждого столбца: {string.Join(", ", AverageColumns(arr))}");
+        
+        Console.WriteLine();
+        Console.WriteLine("Завершить программу y/n ?");
+        s = Console.ReadLine();
+    } while (s != "y");
+}
+
+main();
