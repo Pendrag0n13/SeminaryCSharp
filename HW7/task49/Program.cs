@@ -1,4 +1,4 @@
-﻿// Задача 49: Задайте двумерный массив. Найдите элементы, 
+﻿// Задача 49: Задайте двумерный массив. Найдите элементы,
 // у которых оба индекса чётные, и замените эти элементы на их квадраты.
 // Например, изначально массив
 // выглядел вот так:
@@ -18,10 +18,10 @@ const int RIGHTRANGE = 99;
 int[,] CreateArrayMxN(int rowCount, int colCount, int leftRange = 0, int rightRange = 50)
 {
     Random rand = new Random();
-    int[,] mass = new int [rowCount, colCount];
-    for(int i = 0; i < mass.GetLength(0); i++)
+    int[,] mass = new int[rowCount, colCount];
+    for (int i = 0; i < mass.GetLength(0); i++)
     {
-        for(int j = 0; j < mass.GetLength(1); j++)
+        for (int j = 0; j < mass.GetLength(1); j++)
         {
             mass[i, j] = rand.Next(leftRange, rightRange + 1);
         }
@@ -37,12 +37,23 @@ int GetNumber(string message)
 
 void PrintMatrix(int[,] matrix)
 {
-    for(int i = 0; i < matrix.GetLength(0); i++)
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for(int j = 0; j < matrix.GetLength(1); j++)
+        for (int j = 0; j < matrix.GetLength(1); j++)
         {
             Console.Write(matrix[i, j] + " ");
         }
         Console.WriteLine();
+    }
+}
+
+int[,] Replacement(int[,] matrix)
+{
+    for (int i = 1; i < matrix.GetLength(0); i += 2)
+    {
+        for (int j = 1; j < matrix.GetLength(1); j += 2)
+        {
+            matrix[i, j] = matrix[i, j] * matrix[i, j];
+        }
     }
 }
