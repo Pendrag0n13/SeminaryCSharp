@@ -36,3 +36,23 @@ void PrintMatrix(double[,] matrix)
         Console.WriteLine();
     }
 }
+
+void main()
+{
+    String s = String.Empty;
+    do
+    { 
+        int rows = GetNumber("Введите число строк: ");
+        int columns = GetNumber("Введите число столбцов: ");
+        double[,] arr = CreateArrayMxN(rows, columns);
+    
+        PrintMatrix(arr);
+        
+        Console.WriteLine();
+        Console.WriteLine("Завершить программу y/n ?");
+        s = Console.ReadLine();
+    }while(s != "y");
+
+}
+
+main();
