@@ -77,6 +77,29 @@ void PrintDictionary(int[,] dict)
 {
     for (int k = 0; k < dict.GetLength(0); k++)
     {
-        Console.Write($"{dict[k, 0]} встречается {dict[k, 1]} раз(а)");
+        if (dict[k, 1] != 0)
+        {
+            Console.WriteLine($"{dict[k, 0]} встречается {dict[k, 1]} раз(а)");
+        }
     }
 }
+
+void main()
+{
+    String s = String.Empty;
+    do
+    {
+        int rows = GetNumber("Введите число строк: ");
+        int columns = GetNumber("Введите число столбцов: ");
+        int[,] arr = CreateArrayMxN(rows, columns);
+
+        PrintMatrix(arr);
+        Console.WriteLine();
+        PrintDictionary(Dictionary(arr, LIST));
+        Console.WriteLine();
+        Console.WriteLine("Завершить программу y/n ?");
+        s = Console.ReadLine();
+    } while (s != "y");
+}
+
+main();
