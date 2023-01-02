@@ -10,3 +10,17 @@
 // 9 4 2
 // 2 2 6
 // 3 4 7
+
+int[,] CreateArrayMxN(int rowCount, int colCount, int leftRange = 0, int rightRange = 9)
+{
+    Random rand = new Random();
+    int[,] mass = new int[rowCount, colCount];
+    for (int i = 0; i < mass.GetLength(0); i++)
+    {
+        for (int j = 0; j < mass.GetLength(1); j++)
+        {
+            mass[i, j] = rand.Next(leftRange, rightRange + 1);
+        }
+    }
+    return mass;
+}
