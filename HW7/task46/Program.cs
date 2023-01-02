@@ -4,3 +4,7 @@
 // 5 -2 33 -2
 // 77 3 8 1
 
+const int SIZE_N = 5;
+const int SIZE_M = 5;
+const int LEFTRANGE = -99;
+const int RIGHTRANGE = 100;
