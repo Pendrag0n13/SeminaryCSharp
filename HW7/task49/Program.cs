@@ -11,3 +11,6 @@
 // 1 4 7 2
 // 5 81 2 9
 // 8 4 2 4
+
+const int LEFTRANGE = -99;
+const int RIGHTRANGE = 99;
