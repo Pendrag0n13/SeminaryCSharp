@@ -4,21 +4,28 @@
 // 5 -2 33 -2
 // 77 3 8 1
 
-const int SIZE_N = 5;
-const int SIZE_M = 5;
+const int SIZE_N = 4;
+const int SIZE_M = 3;
 const int LEFTRANGE = -99;
 const int RIGHTRANGE = 99;
 
-int[,] CreateArrayMxN(int M, int N, int leftRange, int rightRange)
+int[,] CreateArrayMxN(int M, int N, int leftRange = 0, int rightRange = 50)
 {
-    var rand = new Random();
+    Random rand = new Random();
     int[,] mass = new int [M, N];
-    for(int i = 0; i < M; i++)
+    for(int i = 0; i < mass.GetLength(0); i++)
     {
-        for(int j = 0; j < N; j++)
+        for(int j = 0; j < mass.GetLength(1); j++)
         {
             mass[i, j] = rand.Next(leftRange, rightRange + 1);
         }
     }
     return mass;
 }
+
+int GetNumber(string message)
+{
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
+}
+
