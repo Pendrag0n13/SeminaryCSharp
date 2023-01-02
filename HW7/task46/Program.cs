@@ -29,15 +29,33 @@ int GetNumber(string message)
     return Convert.ToInt32(Console.ReadLine());
 }
 
-votd PrintMatrix(int[,] matrix)
+void PrintMatrix(int[,] matrix)
 {
     for(int i = 0; i < matrix.GetLength(0); i++)
     {
         for(int j = 0; j < matrix.GetLength(1); j++)
         {
-            Console.Write(matrix[i, j], " ");
+            Console.Write(matrix[i, j] + " ");
         }
         Console.WriteLine();
     }
 }
 
+void main()
+{
+    String s = String.Empty;
+    do
+    { 
+        int rows = GetNumber("Введите число строк: ");
+        int columns = GetNumber("Введите число столбцов: ");
+        int[,] arr = CreateArrayMxN(rows, columns);
+        PrintMatrix(arr);
+        
+        Console.WriteLine();
+        Console.WriteLine("Завершить программу y/n ?");
+        s = Console.ReadLine();
+    }while(s != "y");
+
+}
+
+main();
