@@ -17,3 +17,9 @@ int[,] CreateArrayMxN(int M, int N)
     }
     return mass;
 }
+
+int GetNumber(string message)
+{
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
+}
