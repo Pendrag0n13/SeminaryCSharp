@@ -1,4 +1,4 @@
-﻿// Задача 51: Задайте двумерный массив. Найдите сумму элементов, находящихся на главной диагонали 
+﻿// Задача 51: Задайте двумерный массив. Найдите сумму элементов, находящихся на главной диагонали
 // (с индексами (0,0); (1;1) и т.д.
 // Например, задан массив:
 // 1 4 7 2
@@ -8,7 +8,7 @@
 // ​
 // Доп. условие для 51 задачи: сделать суммирование в один цикл. Матрица может быть прямоугольный
 
-int[,] CreateArrayMxN(int rowCount, int colCount, int leftRange = 0, int rightRange = 50)
+int[,] CreateArrayMxN(int rowCount, int colCount, int leftRange = 0, int rightRange = 10)
 {
     Random rand = new Random();
     int[,] mass = new int[rowCount, colCount];
@@ -38,4 +38,31 @@ void PrintMatrix(int[,] matrix)
         }
         Console.WriteLine();
     }
+}
+
+int SumMainDiagonal(int[,] matrix)
+{
+    int sum = 0;
+    if (matrix.GetLength(0) == matrix.GetLength(1))
+    {
+        for (int i = 0; i < matrix.GetLength(0); i++)
+        {
+            sum += matrix[i, i];
+        }
+    }
+    else
+    {
+        for (int i = 0; i < matrix.GetLength(0); i++)
+        {
+            for (int j = 0; j < matrix.GetLength(1); j++)
+            {
+                if (i == j)
+                {
+                    sum += matrix[i, j];
+                }
+            }
+        }
+    }
+
+    return sum;
 }
