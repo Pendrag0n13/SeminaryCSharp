@@ -56,4 +56,27 @@ int[,] Replacement(int[,] matrix)
             matrix[i, j] = matrix[i, j] * matrix[i, j];
         }
     }
+    return matrix;
 }
+
+void main()
+{
+    String s = String.Empty;
+    do
+    { 
+        int rows = GetNumber("Введите число строк: ");
+        int columns = GetNumber("Введите число столбцов: ");
+        int[,] arr = CreateArrayMxN(rows, columns);
+        Console.WriteLine("before");
+        PrintMatrix(arr);
+        Console.WriteLine("after");
+        PrintMatrix(Replacement(arr));
+        
+        Console.WriteLine();
+        Console.WriteLine("Завершить программу y/n ?");
+        s = Console.ReadLine();
+    }while(s != "y");
+
+}
+
+main();
