@@ -32,3 +32,17 @@ void PrintMatrix(int[,] matrix)
         Console.WriteLine();
     }
 }
+
+int[,] Replacement(int[,] matrix)
+{
+    int tmp;
+    
+    for (int j = 1; j < matrix.GetLength(1); j++)
+    {
+        tmp = matrix[0, j];
+        matrix[0, j] = matrix[matrix.GetLength(0)-1, j];
+        matrix[matrix.GetLength(0)-1, j] = tmp;
+    }
+    
+    return matrix;
+}
