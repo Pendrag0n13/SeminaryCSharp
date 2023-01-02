@@ -41,3 +41,13 @@ void PrintMatrix(int[,] matrix)
         Console.WriteLine();
     }
 }
+
+string SearchElement(int[,] matrix, int i, int j)
+{
+    string str = "—> числа с такой позицией в матрице нет";
+    if(i < matrix.GetLength(0) && j < matrix.GetLength(1))
+    {
+        str = "—> " + matrix[i,j].ToString();
+    }
+    return str;
+}
