@@ -1,4 +1,4 @@
-﻿// Задача 57: Составить частотный словарь элементов двумерного массива. 
+﻿// Задача 57: Составить частотный словарь элементов двумерного массива.
 // Частотный словарь содержит информацию о том, сколько раз встречается элемент входных данных.
 // 1, 2, 3
 // 4, 6, 1
@@ -40,4 +40,20 @@ void PrintMatrix(int[,] matrix)
         }
         Console.WriteLine();
     }
+}
+
+int CountElement(int[,] matrix, int element)
+{
+    int count = 0;
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            if (element == matrix[i, j])
+            {
+                count++;
+            }
+        }
+    }
+    return count;
 }
