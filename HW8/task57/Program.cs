@@ -10,3 +10,16 @@
 // 4 встречается 1 раз
 // 6 встречается 2 раза
 // В нашей исходной матрице встречаются элементы от 0 до 9
+int[,] CreateArrayMxN(int rowCount, int colCount, int leftRange = 0, int rightRange = 9)
+{
+    Random rand = new Random();
+    int[,] mass = new int[rowCount, colCount];
+    for (int i = 0; i < mass.GetLength(0); i++)
+    {
+        for (int j = 0; j < mass.GetLength(1); j++)
+        {
+            mass[i, j] = rand.Next(leftRange, rightRange + 1);
+        }
+    }
+    return mass;
+}
