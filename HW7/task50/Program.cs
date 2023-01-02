@@ -6,3 +6,7 @@
 // 5 9 2 3
 // 8 4 2 4
 // 1 7 -> такого числа в массиве нет
+
+const int ROWSCOUNT = 5;
+const int COLUMNSCOUNT = 5;
+
