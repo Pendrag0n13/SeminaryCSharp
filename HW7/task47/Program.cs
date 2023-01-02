@@ -18,3 +18,9 @@ double[,] CreateArrayMxN(int rowCount, int colCount, int leftRange = 0, int righ
     }
     return mass;
 }
+
+int GetNumber(string message)
+{
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
+}
