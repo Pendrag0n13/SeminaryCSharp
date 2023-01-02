@@ -1,4 +1,4 @@
-﻿// Задача 59: Задайте двумерный массив из целых чисел. Напишите программу, 
+﻿// Задача 59: Задайте двумерный массив из целых чисел. Напишите программу,
 // которая удалит строку и столбец, на пересечении которых расположен наименьший элемент массива.
 // Например, задан массив:
 // 1 4 7 2
@@ -42,3 +42,24 @@ void PrintMatrix(int[,] matrix)
         Console.WriteLine();
     }
 }
+
+(int, int) MinElement(int[,] matrix)
+{
+    int min = matrix[0, 0];
+    int indexI = 0;
+    int indexJ = 0;
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            if (matrix[i, j] < min)
+            {
+                min = matrix[i, j];
+                indexI = i;
+                indexJ = j;
+            }
+        }
+    }
+    return (indexI, indexJ);
+}
+
