@@ -63,3 +63,31 @@ void PrintMatrix(int[,] matrix)
     return (indexI, indexJ);
 }
 
+int[,] DeleteCrossMinElement(int[,] matrix)
+{
+    int[,] newMatrix = new int[matrix.GetLength(0) - 1, matrix.GetLength(1) - 1];
+    var (indexI, indexJ) = MinElement(matrix);
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            if (i < indexI && j < indexJ)
+            {
+                newMatrix[i, j] = matrix[i, j];
+            }
+            else if (i > indexI && j < indexJ)
+            {
+                newMatrix[i - 1, j] = matrix[i, j];
+            }
+            else if (i < indexI && j > indexJ)
+            {
+                newMatrix[i, j - 1] = matrix[i, j];
+            }
+            else if (i > indexI && j > indexJ)
+            {
+                newMatrix[i - 1, j - 1] = matrix[i, j];
+            }
+        }
+    }
+    return newMatrix;
+}
