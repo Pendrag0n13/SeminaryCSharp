@@ -43,7 +43,14 @@ void PrintMatrix(int[,] matrix)
 int SumMainDiagonal(int[,] matrix)
 {
     int sum = 0;
-    if (matrix.GetLength(0) == matrix.GetLength(1))
+    if (matrix.GetLength(0) == matrix.GetLength(1) || matrix.GetLength(0) > matrix.GetLength(1))
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            sum += matrix[j, j];
+        }
+    }
+    else if (matrix.GetLength(0) < matrix.GetLength(1))
     {
         for (int i = 0; i < matrix.GetLength(0); i++)
         {
@@ -67,24 +74,22 @@ int SumMainDiagonal(int[,] matrix)
     return sum;
 }
 
-
 void main()
 {
     String s = String.Empty;
     do
-    { 
+    {
         int rows = GetNumber("Введите число строк: ");
         int columns = GetNumber("Введите число столбцов: ");
         int[,] arr = CreateArrayMxN(rows, columns);
         Console.WriteLine("Matrix:");
         PrintMatrix(arr);
         Console.Write($"Summ = {SumMainDiagonal(arr)}");
-        
+
         Console.WriteLine();
         Console.WriteLine("Завершить программу y/n ?");
         s = Console.ReadLine();
-    }while(s != "y");
-
+    } while (s != "y");
 }
 
 main();
