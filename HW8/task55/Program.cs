@@ -47,3 +47,24 @@ int[,] Replacement(int[,] matrix)
 
     return temp;
 }
+
+void main()
+{
+    String s = String.Empty;
+    do
+    {
+        int rows = GetNumber("Введите число строк: ");
+        int columns = GetNumber("Введите число столбцов: ");
+        int[,] arr = CreateArrayMxN(rows, columns);
+
+        PrintMatrix(arr);
+        Console.WriteLine();
+        PrintMatrix(Replacement(arr));
+
+        Console.WriteLine();
+        Console.WriteLine("Завершить программу y/n ?");
+        s = Console.ReadLine();
+    } while (s != "y");
+}
+
+main();
