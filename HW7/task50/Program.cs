@@ -1,4 +1,4 @@
-﻿// Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, 
+﻿// Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве,
 // и возвращает значение этого элемента или же указание, что такого элемента нет.
 
 // Например, задан массив:
@@ -45,9 +45,29 @@ void PrintMatrix(int[,] matrix)
 string SearchElement(int[,] matrix, int i, int j)
 {
     string str = "—> числа с такой позицией в матрице нет";
-    if(i < matrix.GetLength(0) && j < matrix.GetLength(1))
+    if (i <= matrix.GetLength(0) && j <= matrix.GetLength(1) && i > 0 && j > 0)
     {
-        str = "—> " + matrix[i,j].ToString();
+        str = "—> " + matrix[i - 1, j - 1].ToString();
     }
     return str;
 }
+
+void main()
+{
+    String s = String.Empty;
+    do
+    {
+        int[,] arr = CreateArrayMxN(ROWSCOUNT, COLUMNSCOUNT);
+        int rows = GetNumber("Введите строку: ");
+        int columns = GetNumber("Введите  столбец: ");
+        Console.WriteLine();
+        Console.WriteLine($"{rows} {columns} {SearchElement(arr, rows, columns)}");
+        Console.WriteLine();
+        PrintMatrix(arr);
+        Console.WriteLine();
+        Console.WriteLine("Завершить программу y/n ?");
+        s = Console.ReadLine();
+    } while (s != "y");
+}
+
+main();
