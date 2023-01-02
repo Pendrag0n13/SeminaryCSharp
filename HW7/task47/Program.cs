@@ -13,7 +13,7 @@ double[,] CreateArrayMxN(int rowCount, int colCount, int leftRange = 0, int righ
     {
         for (int j = 0; j < mass.GetLength(1); j++)
         {
-            mass[i, j] = rand.NextDouble() * rightRange;
+            mass[i, j] = rand.NextDouble() * (rightRange + leftRange) + leftRange;
         }
     }
     return mass;
