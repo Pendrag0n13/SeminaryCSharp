@@ -56,6 +56,7 @@ int[] SortRow(int[] array)
             }
         }
     }
+    return array;
 }
 
 int[] ArrayGetRow(int[,] matrix, int rowNumber)
@@ -65,6 +66,7 @@ int[] ArrayGetRow(int[,] matrix, int rowNumber)
     {
         array[i] = matrix[rowNumber, i];
     }
+    return array;
 }
 
 bool ArraySetRow(int[] array, int[,] matrix, int rowNumber)
@@ -78,4 +80,12 @@ bool ArraySetRow(int[] array, int[,] matrix, int rowNumber)
         return true;
     }
     return false;
+}
+
+void SortMatrix(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(1); i++)
+    {
+        ArraySetRow(SortRow(ArrayGetRow(matrix, i)),matrix, i);
+    }
 }
