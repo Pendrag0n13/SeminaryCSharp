@@ -1,11 +1,11 @@
-﻿// Задача 56: Задайте прямоугольный двумерный массив. 
+﻿// Задача 56: Задайте прямоугольный двумерный массив.
 // Напишите программу, которая будет находить строку с наименьшей суммой элементов.
 // Например, задан массив:
 // 1 4 7 2
 // 5 9 2 3
 // 8 4 2 4
 // 5 2 6 7
-// Программа считает сумму элементов в каждой строке и выдаёт номер строки 
+// Программа считает сумму элементов в каждой строке и выдаёт номер строки
 // с наименьшей суммой элементов: 1 строка
 int[,] CreateArrayMxN(int rowCount, int colCount, int leftRange = 0, int rightRange = 9)
 {
@@ -37,4 +37,27 @@ void PrintMatrix(int[,] matrix)
         }
         Console.WriteLine();
     }
+}
+
+int[] ArrayGetRow(int[,] matrix, int rowNumber)
+{
+    int[] array = new int[matrix.GetLength(1)];
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = matrix[rowNumber, i];
+    }
+    return array;
+}
+
+bool ArraySetRow(int[] array, int[,] matrix, int rowNumber)
+{
+    if (array.Length == matrix.GetLength(1))
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            matrix[rowNumber, i] = array[i];
+        }
+        return true;
+    }
+    return false;
 }
