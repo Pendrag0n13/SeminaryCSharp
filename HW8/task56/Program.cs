@@ -61,3 +61,12 @@ bool ArraySetRow(int[] array, int[,] matrix, int rowNumber)
     }
     return false;
 }
+
+int SumRow(int[] arrayy)
+{
+    int sum = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        sum += array[i];
+    }
+}
