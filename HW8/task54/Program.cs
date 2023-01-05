@@ -1,4 +1,4 @@
-﻿// Задача 54: Задайте двумерный массив. Напишите программу, 
+﻿// Задача 54: Задайте двумерный массив. Напишите программу,
 // которая упорядочит по возрастанию элементы каждой строки двумерного массива.
 // Например, задан массив:
 // 1 4 7 2
@@ -38,5 +38,22 @@ void PrintMatrix(int[,] matrix)
             Console.Write(matrix[i, j] + " ");
         }
         Console.WriteLine();
+    }
+}
+
+int[] SortRow(int[] array)
+{
+    int t;
+    for (int i = 0; i < array.Length; i++)
+    {
+        for (int j = 0; j < array.Length - 1; j++)
+        {
+            if (array[j] > array[j + 1])
+            {
+                t = array[j + 1];
+                array[j + 1] = array[j];
+                array[j] = t;
+            }
+        }
     }
 }
