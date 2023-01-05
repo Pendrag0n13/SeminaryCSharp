@@ -62,11 +62,37 @@ bool ArraySetRow(int[] array, int[,] matrix, int rowNumber)
     return false;
 }
 
-int SumRow(int[] arrayy)
+int SumRow(int[] array)
 {
     int sum = 0;
     for (int i = 0; i < array.Length; i++)
     {
         sum += array[i];
     }
+    return sum;
 }
+
+int[] SumRows(int[,] matrix)
+{
+    int[] array = new int[matrix.GetLength(0)];
+
+    for (int j = 0; j < array.Length; j++)
+    {
+        array[j] = SumRow(ArrayGetRow(matrix, j));
+    }
+    return array;
+}
+
+int RowNumberMinSum(int[] arraySum)
+{
+    int indexRow = 0;
+    for (int j = 0; j < array.Length; j++)
+    {
+        if(array[j] < array[indexRow])
+        {
+            indexRow = j;
+        }
+    }
+    return indexRow;
+}
+
