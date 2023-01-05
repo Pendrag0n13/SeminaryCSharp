@@ -31,9 +31,8 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-int[,] MatrixMultiplication(int[,] A, int[,] B)
+void MatrixMultiplication(int[,] A, int[,] B, int[,] C)
 {
-    int[,] C = new int[A.GetLength(1), B.GetLength(0)];
     int sum = 0;
     for (int i = 0; i < C.GetLength(0); i++)
     {
@@ -47,14 +46,23 @@ int[,] MatrixMultiplication(int[,] A, int[,] B)
             C[i, j] = sum;
         }
     }
-    return C;
 }
 
 bool ValidateMatrixMultiplication(int[,] A, int[,] B)
 {
-    if(A.GetLength(0) == B.GetLength(1))
+    if (A.GetLength(0) == B.GetLength(1))
     {
         return true;
     }
     return false;
+}
+
+int[,] MatrixProduct(int[,] A, int[,] B)
+{
+    int[,] C = new int[A.GetLength(1), B.GetLength(0)];
+    if (ValidateMatrixMultiplication(A, B))
+    {
+        MatrixMultiplication(A, B, C);
+    }
+    return C;
 }
