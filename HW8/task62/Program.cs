@@ -22,7 +22,7 @@ int[,] CreateArrayMxN(int rowCount, int colCount, int leftRange = 0, int rightRa
 
     while (k <= N * M)
     {
-        a[i, j] = k;
+        mass[i, j] = k;
         if (i == Ibeg && j < M - Jfin - 1)
         {
             j++;
@@ -39,7 +39,7 @@ int[,] CreateArrayMxN(int rowCount, int colCount, int leftRange = 0, int rightRa
         {
             i--;
         }
-        
+
         if ((i == Ibeg + 1) && (j == Jbeg) && (Jbeg != M - Jfin - 1))
         {
             Ibeg++;
@@ -69,3 +69,23 @@ void PrintMatrix(int[,] matrix)
         Console.WriteLine();
     }
 }
+
+void main()
+{
+    String s = String.Empty;
+    do
+    {
+        Console.Clear();
+        int rows = GetNumber("Введите число строк: ");
+        int columns = GetNumber("Введите число столбцов: ");
+        int[,] arr = CreateArrayMxN(rows, columns);
+        Console.WriteLine();
+        PrintMatrix(arr);
+
+        Console.WriteLine();
+        Console.WriteLine("Завершить программу y/n ?");
+        s = Console.ReadLine();
+    } while (s != "y");
+}
+
+main();
