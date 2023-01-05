@@ -86,9 +86,9 @@ int[] SumRows(int[,] matrix)
 int RowNumberMinSum(int[] arraySum)
 {
     int indexRow = 0;
-    for (int j = 0; j < array.Length; j++)
+    for (int j = 0; j < arraySum.Length; j++)
     {
-        if(array[j] < array[indexRow])
+        if(arraySum[j] < arraySum[indexRow])
         {
             indexRow = j;
         }
@@ -96,3 +96,25 @@ int RowNumberMinSum(int[] arraySum)
     return indexRow;
 }
 
+void main()
+{
+    String s = String.Empty;
+    do
+    {
+        Console.Clear();
+        int rows = GetNumber("Введите число строк: ");
+        int columns = GetNumber("Введите число столбцов: ");
+        int[,] arr = CreateArrayMxN(rows, columns);
+
+        PrintMatrix(arr);
+        Console.WriteLine();
+        
+        Console.WriteLine($"Номер строки с наименьшей суммой элементов: {RowNumberMinSum(SumRows(arr)) + 1} строка");
+        
+        Console.WriteLine();
+        Console.WriteLine("Завершить программу y/n ?");
+        s = Console.ReadLine();
+    } while (s != "y");
+}
+
+main();
