@@ -57,3 +57,25 @@ int[] SortRow(int[] array)
         }
     }
 }
+
+int[] ArrayGetRow(int[,] matrix, int rowNumber)
+{
+    int[] array = new int[matrix.GetLength(0)];
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = matrix[rowNumber, i];
+    }
+}
+
+bool ArraySetRow(int[] array, int[,] matrix, int rowNumber)
+{
+    if (array.Length == matrix.GetLength(0))
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            matrix[rowNumber, i] = array[i];
+        }
+        return true;
+    }
+    return false;
+}
