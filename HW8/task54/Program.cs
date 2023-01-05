@@ -61,7 +61,7 @@ int[] SortRow(int[] array)
 
 int[] ArrayGetRow(int[,] matrix, int rowNumber)
 {
-    int[] array = new int[matrix.GetLength(0)];
+    int[] array = new int[matrix.GetLength(1)];
     for (int i = 0; i < array.Length; i++)
     {
         array[i] = matrix[rowNumber, i];
@@ -71,7 +71,7 @@ int[] ArrayGetRow(int[,] matrix, int rowNumber)
 
 bool ArraySetRow(int[] array, int[,] matrix, int rowNumber)
 {
-    if (array.Length == matrix.GetLength(0))
+    if (array.Length == matrix.GetLength(1))
     {
         for (int i = 0; i < array.Length; i++)
         {
@@ -84,7 +84,7 @@ bool ArraySetRow(int[] array, int[,] matrix, int rowNumber)
 
 void SortMatrix(int[,] matrix)
 {
-    for (int i = 0; i < matrix.GetLength(1); i++)
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
         ArraySetRow(SortRow(ArrayGetRow(matrix, i)),matrix, i);
     }
@@ -101,7 +101,8 @@ void main()
 
         PrintMatrix(arr);
         Console.WriteLine();
-        PrintMatrix(SortMatrix(arr));
+        SortMatrix(arr);
+        PrintMatrix(arr);
 
         Console.WriteLine();
         Console.WriteLine("Завершить программу y/n ?");
