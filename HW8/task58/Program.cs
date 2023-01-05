@@ -49,3 +49,12 @@ int[,] MatrixMultiplication(int[,] A, int[,] B)
     }
     return C;
 }
+
+bool ValidateMatrixMultiplication(int[,] A, int[,] B)
+{
+    if(A.GetLength(0) == B.GetLength(1))
+    {
+        return true;
+    }
+    return false;
+}
