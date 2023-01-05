@@ -62,11 +62,30 @@ void PrintMatrix(int[,,] matrix)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            for (int l = 0; l < mass.GetLength(2); l++)
+            for (int l = 0; l < matrix.GetLength(2); l++)
             {
-                Console.Write(matrix[i, j, l] + "\t");
+                Console.Write($"{matrix[i, j, l]}({i}, {j}, {l}) \t");
             }
             Console.WriteLine();
         }
     }
 }
+void main()
+{
+    String s = String.Empty;
+    do
+    {
+        Console.Clear();
+        int X = GetNumber("Введите размерность по Х: ");
+        int Y = GetNumber("Введите размерность по Y: ");
+        int Z = GetNumber("Введите размерность по Z: ");
+        int[,,] arr = CreateArrayXxYxZ(X, Y, Z);
+        Console.WriteLine();
+        PrintMatrix(arr);        
+        Console.WriteLine();
+        Console.WriteLine("Завершить программу y/n ?");
+        s = Console.ReadLine();
+    } while (s != "y");
+}
+
+main();
