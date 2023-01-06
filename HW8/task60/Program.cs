@@ -29,13 +29,20 @@ int[,,] CreateArrayXxYxZ(
 
 bool Validate(int[] array, int number)
 {
+    
     for (int i = 0; i < array.GetLength(0); i++)
     {
         if (number == array[i])
         {
             return false;
         }
+        if(array[i] == 0)
+        {
+            array[i] = number;
+            return true;
+        }
     }
+
     return true;
 }
 
