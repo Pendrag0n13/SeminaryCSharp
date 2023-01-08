@@ -7,3 +7,16 @@ int GetNumber(string message)
     Console.Write(message);
     return Convert.ToInt32(Console.ReadLine());
 }
+
+(int, int) MinMax(int N1, int N2)
+{
+    if(N1 > N2)
+    {
+        return (N2, N1);
+    }
+    else
+    {
+        return(N1, N2);
+    }
+}
+
