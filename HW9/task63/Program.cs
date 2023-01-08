@@ -8,3 +8,17 @@ int GetNumber(string message)
     Console.Write(message);
     return Convert.ToInt32(Console.ReadLine());
 }
+
+int NatureNumber(int Number)
+{
+    if(Number > 0 && Number != 1)
+    {
+        Console.Write($"{NatureNumber(Number - 1)}, ");
+        
+    }
+    return Number;
+}
+
+int N = 10;
+Console.Write($"N = {N} —> ");
+Console.WriteLine($"{NatureNumber(N)} ");
