@@ -21,4 +21,11 @@ int A(int m, int n)
     {
         return A(m - 1, A(m, n - 1));
     }
+    return 0;
 }
+
+int M = GetNumber("Введите m: ");
+int N = GetNumber("Введите n: ");
+
+Console.Write($"m = {M}, n = {N} —> A(m,n) = ");
+Console.WriteLine($"{A(M, N)} ");
