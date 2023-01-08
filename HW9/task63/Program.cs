@@ -19,6 +19,6 @@ int NatureNumber(int Number)
     return Number;
 }
 
-int N = 10;
+int N = GetNumber("Введите N: ");
 Console.Write($"N = {N} —> ");
 Console.WriteLine($"{NatureNumber(N)} ");
