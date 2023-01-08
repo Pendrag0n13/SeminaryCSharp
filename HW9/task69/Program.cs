@@ -9,3 +9,17 @@ int GetNumber(string message)
     return Convert.ToInt32(Console.ReadLine());
 }
 
+int Multy(int A, int B)
+{
+    if(B > 0)
+    {
+        return A * Multy(A, B - 1);
+    }
+    return 1;
+}
+
+int A = GetNumber("Введите A: ");
+int B = GetNumber("Введите B: ");
+
+Console.Write($"A = {A}, B = {B} —> ");
+Console.WriteLine($"{Multy( A,  B)} ");
